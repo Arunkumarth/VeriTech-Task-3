@@ -1,0 +1,154 @@
+body,*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+h1{
+    text-align: center;
+    padding-bottom: 20px;
+}
+.container{
+    z-index: 1;
+    box-sizing: border-box;
+    width: 100%;
+    min-height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4%;
+    background:linear-gradient(23deg,rgb(105, 194, 224),rgb(255, 255, 132));
+}
+.content{
+    min-width: 70%;
+    padding: 4%;
+    border-radius: 5px;
+   
+}
+#todo-form{
+    display: flex;
+    align-items: center;    
+    justify-content: center;
+    gap: 6px;
+}
+
+#todo-list{
+    padding: 2%;
+    list-style:decimal;
+    /* list-style-position: outside;  */
+}
+#todo-input{
+    outline: none;
+    border: none;
+    padding: 8px;
+    text-align: center;  
+}
+form>button{
+    padding: 7px;
+    border: none;
+    color: white;
+    background-color: rgb(50, 50, 255);
+}
+form>button:hover{
+    cursor: pointer;
+}
+
+#update-modal{
+  display: none; /* Hide modal by default */
+  position: fixed; /* Position modal */
+  z-index: 100; /* Ensure it's on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  background-color: rgba(0, 0, 0, 0.5); /* Black background with opacity */
+}
+
+#update-form{
+  width: 60%; /* Set width */
+  background-color: #fefefe;
+  margin: auto; /* Center modal on screen */
+  padding: 20px;
+  border: 1px solid #888;
+  display: flex;
+  justify-content: center;
+  gap: 4px;
+}
+li{
+    padding: 8px 0;
+    font-size: 1rem;
+    display: flex;
+    justify-content:space-around;
+    gap: 6px;
+    background-color: rgb(241, 237, 237);
+    margin: 4px 0;
+    }
+li:hover{
+    /* border: 1px solid blueviolet; */
+    box-shadow: 1px 1px 6px black;
+}
+span>button{
+    outline: none;
+    border: none;
+}
+span>button:hover{
+    cursor: pointer;
+}
+img{
+    width: 1.1rem;
+    height: 1.2rem;
+    outline: none;
+    border: none;
+   
+}
+.li-Completed{
+    color: green;
+    text-decoration: line-through;
+}
+.li-Pending{
+    color: red;
+    font-weight: 600;
+
+}
+.t-name{
+    flex: 8;
+    padding-left: 6px;
+}
+.t-btn{
+    flex: 1;
+}
+.Pending{
+    font-size: .8rem;
+    padding: 1px;
+    flex: .2;
+    color: blue;
+    text-align: center;
+    /* border: 1px solid blue; */
+    border-radius: 3px;
+    background-color: rgb(21, 188, 244);
+}
+.Completed{
+    font-size: .8rem;
+    padding: 1px;
+    flex:.2;
+    color: green;
+    text-align: center;
+    border: 1px solid green;
+    background-color: rgb(57, 233, 116);
+}
+footer{
+    text-align: center;
+    font-size: .6rem;
+}
+
+/* MEDIA QUERY FOR MOBILE */
+
+@media only screen and (max-width:600px) {
+    .content{
+        width: 96%;
+        padding: 1%;
+        border-radius: 5px;
+    }
+    .container{
+        padding: 2%;
+    }
+}

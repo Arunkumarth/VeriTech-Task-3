@@ -1,0 +1,73 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Todo List App</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="content">
+            <h1>Todo List</h1>
+    <form id="todo-form">
+        <input type="text" id="todo-input" placeholder="Enter your todo"  maxlength="60" >
+        <button id="add-btn" type="submit">Add</button>
+    </form>
+    <div id="update-modal">
+        <form id="update-form">
+            <input type="text" id="update-input" placeholder="Enter your todo"  maxlength="60" >
+            <button id="edit-btn" type="submit">Edit</button>
+        </form>
+    </div>
+    <ul id="todo-list">
+        <!-- Todo items will be dynamically added here -->
+    </ul>
+        </div>
+        
+    </div>
+   <span> </span>
+<!-- <script>
+    const form = document.getElementById('todo-form');
+    const input = document.getElementById('todo-input');
+    const todoList = document.getElementById('todo-list');
+    
+    const bd = document.body;
+
+
+    form.addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent the default form submission
+
+        // Get the value of the input field
+        const todoText = input .value.trim()
+        
+        // If the input is not empty, add a new todo item
+        if (todoText !== '') {
+            // Create a new list item
+            const listItem = document.createElement('li');
+            const span = document.createElement("span");
+            // listItem.textContent = todoText;
+           span.textContent = todoText
+            listItem.innerHTML=`<button id="1" onClick="()=>console.log("hello");">Edit</button>`
+            // Append the new list item to the todo list
+            todoList.appendChild(listItem);
+            bd.append(span);
+            // Clear the input field
+            input.value = '';
+            
+        }
+    });
+</script> -->
+
+<script src="script.js"></script>
+<footer>
+    <a href="https://www.flaticon.com/free-icons/pencil" title="pencil icons">Pencil icons created by riajulislam - Flaticon</a>
+
+    <a href="https://www.flaticon.com/free-icons/trash-can" title="trash can icons">Trash can icons created by kliwir art - Flaticon</a>
+
+    <a href="https://www.flaticon.com/free-icons/tick" title="tick icons">Tick icons created by kliwir art - Flaticon</a>
+</footer>
+</body>
+</html>
